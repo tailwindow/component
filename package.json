@@ -1,7 +1,7 @@
 {
-  "name": "component",
+  "name": "tailwindow-component",
   "version": "0.1.0",
-  "private": true,
+  "description": "Tailwindow is a collection of UI Components created using Tailwind CSS Framework. The UI Components gives you all of the building blocks you need to build any designs without any annoying opinionated styles you have to fight to override",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,8 +9,11 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
+  "author": "Martien Dermawan Tanama <martiendt@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "core-js": "^3.6.5",
+    "prismjs": "^1.20.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -27,6 +30,7 @@
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.0.3",
+    "autoprefixer": "^9.8.1",
     "babel-eslint": "^10.1.0",
     "chai": "^4.1.2",
     "eslint": "^6.7.2",
@@ -38,6 +42,7 @@
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.4.6",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {

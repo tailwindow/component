@@ -1,0 +1,18 @@
+{
+  "name": "tailwindcss",
+  "version": "1.0.0",
+  "description": "UI Component using default style from Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss tailwind.css -o main.css",
+    "watch": "postcss tailwind.css -o main.css --watch"
+  },
+  "author": "Martien Dermawan Tanama",
+  "license": "MIT",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.2",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
+  }
+}
