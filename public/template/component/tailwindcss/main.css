@@ -486,12 +486,44 @@ object {
   background-color: rgba(66, 153, 225, var(--bg-opacity));
 }
 
+.border-red-500 {
+  --border-opacity: 1;
+  border-color: #f56565;
+  border-color: rgba(245, 101, 101, var(--border-opacity));
+}
+
+.border-yellow-500 {
+  --border-opacity: 1;
+  border-color: #ecc94b;
+  border-color: rgba(236, 201, 75, var(--border-opacity));
+}
+
+.border-green-500 {
+  --border-opacity: 1;
+  border-color: #48bb78;
+  border-color: rgba(72, 187, 120, var(--border-opacity));
+}
+
+.border-blue-500 {
+  --border-opacity: 1;
+  border-color: #4299e1;
+  border-color: rgba(66, 153, 225, var(--border-opacity));
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
 }
 
 .block {
@@ -520,6 +552,10 @@ object {
 
 .self-center {
   align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
 }
 
 .justify-center {
@@ -577,8 +613,16 @@ object {
   margin-bottom: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .mb-4 {
@@ -591,6 +635,11 @@ object {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
@@ -640,10 +689,46 @@ object {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.text-gray-500 {
+  --text-opacity: 1;
+  color: #a0aec0;
+  color: rgba(160, 174, 192, var(--text-opacity));
+}
+
+.text-gray-800 {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+}
+
+.text-red-100 {
+  --text-opacity: 1;
+  color: #fff5f5;
+  color: rgba(255, 245, 245, var(--text-opacity));
+}
+
+.text-red-500 {
+  --text-opacity: 1;
+  color: #f56565;
+  color: rgba(245, 101, 101, var(--text-opacity));
+}
+
 .text-red-700 {
   --text-opacity: 1;
   color: #c53030;
   color: rgba(197, 48, 48, var(--text-opacity));
+}
+
+.text-yellow-100 {
+  --text-opacity: 1;
+  color: #fffff0;
+  color: rgba(255, 255, 240, var(--text-opacity));
+}
+
+.text-yellow-500 {
+  --text-opacity: 1;
+  color: #ecc94b;
+  color: rgba(236, 201, 75, var(--text-opacity));
 }
 
 .text-yellow-700 {
@@ -652,16 +737,44 @@ object {
   color: rgba(183, 121, 31, var(--text-opacity));
 }
 
+.text-green-100 {
+  --text-opacity: 1;
+  color: #f0fff4;
+  color: rgba(240, 255, 244, var(--text-opacity));
+}
+
+.text-green-500 {
+  --text-opacity: 1;
+  color: #48bb78;
+  color: rgba(72, 187, 120, var(--text-opacity));
+}
+
 .text-green-700 {
   --text-opacity: 1;
   color: #2f855a;
   color: rgba(47, 133, 90, var(--text-opacity));
 }
 
+.text-blue-100 {
+  --text-opacity: 1;
+  color: #ebf8ff;
+  color: rgba(235, 248, 255, var(--text-opacity));
+}
+
+.text-blue-500 {
+  --text-opacity: 1;
+  color: #4299e1;
+  color: rgba(66, 153, 225, var(--text-opacity));
+}
+
 .text-blue-700 {
   --text-opacity: 1;
   color: #2b6cb0;
   color: rgba(43, 108, 176, var(--text-opacity));
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .w-full {
@@ -679,5 +792,9 @@ object {
 
   .xl\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .xl\:text-2xl {
+    font-size: 1.5rem;
   }
 }
