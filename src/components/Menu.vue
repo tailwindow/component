@@ -15,6 +15,11 @@
           </p>
         </router-link>
       </div>
+      <div class="flex-shrink bg-gray-800 p-4">
+        <p class="p-2 bg-yellow-400 rounded-md text-center">
+          <b>early access</b>, more component is coming
+        </p>
+      </div>
       <div class="flex flex-1 flex-col mb-16 sm:mb-0 bg-gray-800 scrolling-touch overflow-y-auto hide-overflow-bar">
         <hr class="mb-4 mt-1 bg-gray-100 mx-4 opacity-50">
         <template v-for="(componentGroup, index) in listGroups">
