@@ -107,7 +107,6 @@
         </a>
         <a
           href="https://www.tailwindow.com"
-          target="_blank"
           class="flex-1 pt-4 flex flex-col"
         >
           <i class="fas fa-globe text-xl text-white" />
