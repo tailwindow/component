@@ -1,9 +1,9 @@
 <template>
-  <main class="overflow-auto bg-gray-100 flex flex-grow justify-center w-full mx-auto">
+  <main class="bg-gray-100 overflow-hidden flex flex-grow justify-center w-full mx-auto">
     <pre
       v-show="isPreviewOpen"
       id="code-preview"
-      class="flex flex-1 overflow-x-auto line-numbers language-markup"
+      class="flex flex-1 overflow-x-auto scroll-touch line-numbers language-markup"
     >
       <code
         id="code-container"
@@ -27,7 +27,7 @@
     <div
       v-if="path != '/'"
       v-show="!isPreviewOpen"
-      class="flex overflow-y-auto w-full shadow-lg"
+      class="flex w-full shadow-lg"
       :class="{ 'max-w-screen-xs': device === 'xs', 'max-w-screen-sm': device === 'sm', 'max-w-screen-md': device === 'md', 'max-w-screen-lg': device === 'lg', '': device === 'xl' }"
     >
       <!-- Device Screen -->
@@ -37,7 +37,7 @@
         id="preview"
         :src="templatebaseUrl + '/template' + path + '/index.html'"
         frameborder="0"
-        class="bg-white flex-grow -mb-12"
+        class="bg-white flex-grow"
       />
     </div>
   </main>

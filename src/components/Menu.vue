@@ -1,11 +1,11 @@
 <template>
   <nav
     v-show="isSidebarOpen"
-    class="w-screen sm:w-56 h-screen overflow-y-auto flex-shrink-0 fixed sm:relative"
+    class="w-screen sm:w-56 h-screen overflow-hidden flex-shrink-0 fixed sm:relative"
   >
-    <div class="flex flex-col h-full w-screen sm:w-56">
+    <div class="flex flex-1 flex-between h-screen flex-col w-screen sm:w-56">
       <div
-        class="flex flex-col flex-1 h-24 sm:h-16 w-full shadow-md px-16 sm:px-8 pt-6 sm:pt-3 pb-4 sm:pb-2 bg-gray-800 text-gray-200 text-center"
+        class="flex flex-shrink flex-col flex-shrink w-full px-16 sm:px-8 pt-6 sm:pt-3 pb-4 sm:pb-2 bg-gray-800 text-gray-200 text-center"
         @click.prevent="$store.dispatch('helper/toc/open')"
       >
         <router-link to="/">
@@ -15,7 +15,7 @@
           </p>
         </router-link>
       </div>
-      <div class="flex flex-col h-full pb-16 bg-gray-800 overflow-y-scroll">
+      <div class="flex flex-1 flex-col pb-16 bg-gray-800 scrolling-touch overflow-y-auto hide-overflow-bar">
         <hr class="mb-4 mt-1 bg-gray-100 mx-4 opacity-50">
         <template v-for="(componentGroup, index) in listGroups">
           <button
@@ -29,11 +29,7 @@
             {{ componentGroup | titlecase }}
           </button>
         </template>
-        <hr
-          v-if="isTocOpen"
-          class="mb-4 mt-2 bg-gray-100 mx-4 opacity-50"
-        >
-        <div class="flex flex-wrap flex-row h-full sm:flex-no-wrap sm:flex-col w-full px-2">
+        <div class="flex flex-row h-full sm:flex-col w-full px-2">
           <div
             v-if="!isTocOpen && listComponents.length > 0"
             class="w-1/2 sm:w-full px-2"
@@ -82,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-1 text-center h-16 bg-gray-800 text-gray-200 px-2 pb-2 fixed sm:relative bottom-0 w-full">
+      <div class="flex flex-shrink text-center h-16 bg-gray-800 text-gray-200 px-2 pb-2 fixed sm:relative bottom-0 w-full">
         <a
           v-if="isTocOpen"
           href="javascript:void(0)"

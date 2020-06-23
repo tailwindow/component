@@ -25,6 +25,16 @@ body {
   max-width: 320px;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-overflow-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.hide-overflow-bar {
+  -ms-overflow-style: none;
+}
+
 @tailwind components;
 
 @tailwind utilities;
