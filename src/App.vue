@@ -44,11 +44,16 @@ export default {
       this.path = to.path
       // Refreshed page
       const array = this.path.split('/')
+      // If route component exists
+      this.$store.dispatch('helper/preview/setComponent', null)
       if (array.length === 5) {
+        this.$store.dispatch('helper/preview/setComponent', array[4])
+      }
+      // If route group exists
+      if (array.length >= 4 && array.length <= 5) {
         this.$store.dispatch('helper/preview/setUrl', this.path)
         this.$store.dispatch('helper/preview/setTheme', array[2])
         this.$store.dispatch('helper/preview/setGroup', array[3])
-        this.$store.dispatch('helper/preview/setComponent', array[4])
         this.$store.dispatch('helper/toc/close')
         this.generateMenu(array[3])
       }
@@ -102,7 +107,7 @@ export default {
         if (rawComponent.tailwindcss[group] === undefined) {
           return this.$router.push('/404')
         }
-        if (!rawComponent.tailwindcss[group].includes(this.previewComponent)) {
+        if (this.previewComponent && !rawComponent.tailwindcss[group].includes(this.previewComponent)) {
           return this.$router.push('/404')
         }
         this.$store.dispatch('helper/preview/setComponents', rawComponent.tailwindcss[group])

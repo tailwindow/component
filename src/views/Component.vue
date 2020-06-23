@@ -32,7 +32,7 @@
     >
       <!-- Device Screen -->
       <iframe
-        v-if="path != '/'"
+        v-if="path != '/' && path.split('/').length === 5"
         v-show="!isPreviewOpen"
         id="preview"
         :src="templatebaseUrl + '/template' + path + '/index.html'"
@@ -87,16 +87,22 @@ export default {
       // Handle no page found
       // Should fix it with lazy load all component routes
       const array = this.path.split('/')
-      if (array.length !== 5) {
+      if (array.length < 4 && array.length > 5) {
         return this.$router.push('/404')
       }
+      // if themes exists (Todo: implement themes option)
       if (this.rawComponent[array[2]] === undefined) {
-        return this.$router.push('/404')
+        // return this.$router.push('/404')
       }
+      // if group exists
       if (this.rawComponent.tailwindcss[array[3]] === undefined) {
         return this.$router.push('/404')
       }
+      // if components exists
       if (!this.rawComponent.tailwindcss[array[3]].includes(array[4])) {
+        if (array[4] === undefined) {
+          return
+        }
         return this.$router.push('/404')
       }
       fetch(process.env.VUE_APP_TEMPLATE_BASE_URL + '/template' + this.path + '/index.html').then(function (response) {
