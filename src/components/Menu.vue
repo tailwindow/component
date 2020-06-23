@@ -15,7 +15,7 @@
           </p>
         </router-link>
       </div>
-      <div class="flex flex-1 flex-col pb-16 bg-gray-800 scrolling-touch overflow-y-auto hide-overflow-bar">
+      <div class="flex flex-1 flex-col mb-16 sm:mb-0 bg-gray-800 scrolling-touch overflow-y-auto hide-overflow-bar">
         <hr class="mb-4 mt-1 bg-gray-100 mx-4 opacity-50">
         <template v-for="(componentGroup, index) in listGroups">
           <button
@@ -37,16 +37,16 @@
             <div
               v-for="(component, index) in listComponents.slice(0, (listComponents.length + 1) / 2)"
               :key="'left-' + index"
-              class="w-full mb-3 thumbnail"
+              class="w-full mb-3 thumbnail shadow-md"
               @click.prevent="chooseComponent(component)"
             >
               <router-link
                 tag="button"
-                class="bg-white w-full p-1 self-center rounded-md shadow-md"
+                class="flex bg-white w-full p-2 self-center rounded-md shadow-md"
                 :to="'/component/tailwindcss/'+group+'/'+component"
               >
                 <img
-                  class="object-center rounded-md"
+                  class="flex-1 object-center"
                   :src="'/template/component/tailwindcss/'+group+'/'+component+'/thumb.svg'"
                   alt=""
                 >
@@ -65,11 +65,11 @@
             >
               <router-link
                 tag="button"
-                class="bg-white w-full p-1 self-center rounded-md shadow-md"
+                class="flex bg-white w-full p-2 self-center rounded-md shadow-md"
                 :to="'/component/tailwindcss/'+group+'/'+component"
               >
                 <img
-                  class="object-center rounded-md"
+                  class="flex-1 object-center"
                   :src="'/template/component/tailwindcss/'+group+'/'+component+'/thumb.svg'"
                   alt=""
                 >
@@ -153,6 +153,7 @@ export default {
       this.$store.dispatch('helper/preview/setComponents', this.rawComponent.tailwindcss[componentGroup])
       this.$store.dispatch('helper/preview/setGroup', componentGroup)
       this.$store.dispatch('helper/toc/close')
+      this.$router.push('/component/tailwindcss/' + componentGroup)
     },
     chooseComponent (component) {
       this.$store.dispatch('helper/preview/setGroup', this.group)
