@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Desktop</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0" y="0" width="1440" height="120"></rect>
+        <rect id="Rectangle" fill="#757575" x="1166" y="32" width="56" height="56" rx="28"></rect>
+        <rect id="Rectangle" fill="#757575" x="1254" y="32" width="56" height="56" rx="28"></rect>
+        <rect id="Rectangle" fill="#757575" x="1342" y="32" width="56" height="56" rx="28"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="#757575" x="46" y="32" width="286" height="56"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="#ECECEC" x="0" y="120" width="1440" height="784"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0" y="904" width="1440" height="120"></rect>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="332px" height="203px" viewBox="0 0 332 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Alert" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Alert-Modal" transform="translate(-150.000000, -219.000000)">
+            <g id="Group" transform="translate(151.000000, 220.000000)">
+                <rect id="Rectangle" stroke="#9E9E9E" fill="#FFFFFF" x="0" y="0" width="330" height="201" rx="10"></rect>
+                <path d="M118,53 L219,53 C221.209139,53 223,54.790861 223,57 C223,59.209139 221.209139,61 219,61 L187.260671,61 L187.260671,61 L118,61 C115.790861,61 114,59.209139 114,57 C114,54.790861 115.790861,53 118,53 Z" id="Rectangle" fill="#9E9E9E"></path>
+                <path d="M59,175 L110,175 C112.209139,175 114,176.790861 114,179 C114,181.209139 112.209139,183 110,183 L94.6548588,183 L94.6548588,183 L59,183 C56.790861,183 55,181.209139 55,179 C55,176.790861 56.790861,175 59,175 Z" id="Rectangle" fill="#757575"></path>
+                <path d="M228,175 L279,175 C281.209139,175 283,176.790861 283,179 C283,181.209139 281.209139,183 279,183 L263.654859,183 L263.654859,183 L253.537398,183 L228,183 C225.790861,183 224,181.209139 224,179 C224,176.790861 225.790861,175 228,175 Z" id="Rectangle" fill="#757575"></path>
+                <rect id="Rectangle" fill="#E0E0E0" x="68" y="98" width="201" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#E0E0E0" x="80" y="108" width="177" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#9E9E9E" x="0" y="156" width="330" height="2"></rect>
+                <rect id="Rectangle" fill="#9E9E9E" x="168" y="156" width="2" height="45"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

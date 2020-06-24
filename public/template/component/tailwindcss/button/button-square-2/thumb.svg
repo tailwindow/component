@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="219px" height="110px" viewBox="0 0 219 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Alert Modal</title>
+    <g id="Alert-Modal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(58.000000, 10.000000)">
+            <g id="Group" fill="#757575">
+                <path d="M5,-5.68434189e-14 L99,-5.68434189e-14 C101.761424,-5.73506842e-14 104,2.23857625 104,5 L104,84 C104,86.7614237 101.761424,89 99,89 L69.9000901,89 L5,89 C2.23857625,89 3.38176876e-16,86.7614237 0,84 L0,5 C-3.38176876e-16,2.23857625 2.23857625,-5.63361535e-14 5,-5.68434189e-14 Z" id="Rectangle"></path>
+            </g>
+            <path d="M37.1087909,36.9544991 L45.6548079,43.7892267 L67.8912091,25 L82.291839,37.942162 L85,40.3760457 L85,66 L20,66 L20,50.6239543 L37.1087909,36.9544991 Z M26.5,22 C22.9118727,22 20,24.9118727 20,28.5 C20,32.0881273 22.9118727,35 26.5,35 C30.0881273,35 33,32.0881273 33,28.5 C33,24.9118727 30.0881273,22 26.5,22 Z" id="Shape" fill="#BDBDBD" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
