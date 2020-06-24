@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="219px" height="108px" viewBox="0 0 219 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Button square with icon</title>
+    <g id="Button-square-with-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(58.000000, 9.000000)">
+            <path d="M5,-5.68434189e-14 L99,-5.68434189e-14 C101.761424,-5.73506842e-14 104,2.23857625 104,5 L104,84 C104,86.7614237 101.761424,89 99,89 L69.9000901,89 L5,89 C2.23857625,89 3.38176876e-16,86.7614237 0,84 L0,5 C-3.38176876e-16,2.23857625 2.23857625,-5.63361535e-14 5,-5.68434189e-14 Z" id="Rectangle" fill="#757575"></path>
+            <rect id="Rectangle" stroke="#979797" fill="#E0E0E0" x="20" y="70" width="64" height="4"></rect>
+            <circle id="Oval" fill="#E0E0E0" cx="52.5" cy="35.5" r="22.5"></circle>
+            <polygon id="Path" fill="#BDBDBD" fill-rule="nonzero" points="45.8435164 32.6651704 49.2619232 35.3323811 58.1564836 28 63.9167356 33.0505998 65 34.0004081 65 44 39 44 39 37.9995919"></polygon>
+            <path d="M41.5,27 C40.119951,27 39,28.119951 39,29.5 C39,30.880049 40.119951,32 41.5,32 C42.880049,32 44,30.880049 44,29.5 C44,28.119951 42.880049,27 41.5,27 Z" id="Path" fill="#BDBDBD" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="296px" height="223px" viewBox="0 0 296 223" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card-2" transform="translate(-168.000000, -209.000000)">
+            <g id="Group" transform="translate(169.000000, 210.000000)">
+                <rect id="Rectangle" stroke="#9E9E9E" stroke-width="2" fill="#FFFFFF" x="0" y="0" width="294" height="221"></rect>
+                <path d="M72,112 L224,112 C226.209139,112 228,113.790861 228,116 C228,118.209139 226.209139,120 224,120 L175.5386,120 L175.5386,120 L72,120 C69.790861,120 68,118.209139 68,116 C68,113.790861 69.790861,112 72,112 Z" id="Rectangle" fill="#757575"></path>
+                <g id="Button" transform="translate(101.000000, 175.000000)">
+                    <path d="M5,0 L89,0 C91.7614237,-5.07265313e-16 94,2.23857625 94,5 L94,19 C94,21.7614237 91.7614237,24 89,24 L63.1789276,24 L5,24 C2.23857625,24 3.38176876e-16,21.7614237 0,19 L0,5 C-3.38176876e-16,2.23857625 2.23857625,1.39544373e-15 5,0 Z" id="Rectangle" fill="#757575"></path>
+                    <rect id="Rectangle" fill="#BDBDBD" x="22" y="10" width="48" height="4" rx="2"></rect>
+                </g>
+                <rect id="Rectangle" fill="#E0E0E0" x="50" y="144" width="194" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#757575" x="0" y="55" width="294" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#E0E0E0" x="17" y="133" width="260" height="5" rx="2.5"></rect>
+                <circle id="Oval" fill="#757575" cx="146.5" cy="57.5" r="28.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

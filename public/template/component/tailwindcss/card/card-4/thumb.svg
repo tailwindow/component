@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="420px" height="223px" viewBox="0 0 420 223" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card-4" transform="translate(-106.000000, -195.000000)">
+            <g id="Group" transform="translate(107.000000, 196.000000)">
+                <rect id="Rectangle" stroke="#9E9E9E" stroke-width="2" fill="#FFFFFF" x="0" y="0" width="418" height="221"></rect>
+                <path d="M273,51 L359,51 C361.209139,51 363,52.790861 363,55 C363,57.209139 361.209139,59 359,59 L332.178928,59 L332.178928,59 L273,59 C270.790861,59 269,57.209139 269,55 C269,52.790861 270.790861,51 273,51 Z" id="Rectangle" fill="#757575"></path>
+                <rect id="Rectangle" fill="#E0E0E0" x="260" y="83" width="112" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#E0E0E0" x="245" y="72" width="142" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#E0E0E0" x="260" y="105" width="112" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#E0E0E0" x="250" y="94" width="133" height="5" rx="2.5"></rect>
+                <rect id="Rectangle" fill="#9E9E9E" x="0" y="0" width="209" height="221"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="219px" height="110px" viewBox="0 0 219 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Alert Modal</title>
+    <g id="Alert-Modal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(66.000000, 5.000000)">
+            <polygon id="Rectangle" fill="#757575" points="0 0 88 0 88 25 59.1462301 25 0 25"></polygon>
+            <path d="M5,38 L83,38 C85.7614237,38 88,40.2385763 88,43 L88,58 C88,60.7614237 85.7614237,63 83,63 L59.1462301,63 L5,63 C2.23857625,63 -5.50001544e-16,60.7614237 0,58 L0,43 C-3.38176876e-16,40.2385763 2.23857625,38 5,38 Z" id="Rectangle" fill="#757575"></path>
+            <path d="M12.5,76 L75.5,76 C82.4035594,76 88,81.5964406 88,88.5 C88,95.4035594 82.4035594,101 75.5,101 L59.1462301,101 L12.5,101 C5.59644063,101 8.45442189e-16,95.4035594 0,88.5 C-8.45442189e-16,81.5964406 5.59644063,76 12.5,76 Z" id="Rectangle" fill="#757575"></path>
+            <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="19" y="11" width="49" height="3"></rect>
+            <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="19" y="87" width="49" height="3"></rect>
+            <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="19" y="48" width="49" height="3"></rect>
+        </g>
+    </g>
+</svg>

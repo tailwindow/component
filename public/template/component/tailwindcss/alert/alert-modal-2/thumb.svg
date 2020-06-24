@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="414px" height="187px" viewBox="0 0 414 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Alert" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Alert-Modal-2" transform="translate(-109.000000, -227.000000)">
+            <g id="Group" transform="translate(110.000000, 228.000000)">
+                <rect id="Rectangle" stroke="#9E9E9E" fill="#FFFFFF" x="0" y="0" width="412" height="185"></rect>
+                <rect id="Rectangle" fill="#9E9E9E" x="0" y="0" width="412" height="36"></rect>
+                <rect id="Rectangle" fill="#D6D5D7" x="21" y="16" width="150" height="8" rx="4"></rect>
+                <rect id="Rectangle" fill="#E0E0E0" x="96" y="80" width="230" height="6" rx="3"></rect>
+                <text id="x" font-family="Nunito-Bold, Nunito" font-size="24" font-weight="bold" fill="#ECEBEC">
+                    <tspan x="388" y="24">x</tspan>
+                </text>
+                <path d="M164,130 L248,130 C250.761424,130 253,132.238576 253,135 L253,149 C253,151.761424 250.761424,154 248,154 L222.178928,154 L164,154 C161.238576,154 159,151.761424 159,149 L159,135 C159,132.238576 161.238576,130 164,130 Z" id="Rectangle" fill="#757575"></path>
+                <rect id="Rectangle" fill="#BDBDBD" x="181" y="141" width="48" height="4" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
