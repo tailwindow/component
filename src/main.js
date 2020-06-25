@@ -13,10 +13,6 @@ Vue.use(VueGtag, {
   pageTrackerScreenviewEnabled: true
 }, router)
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
-
 Vue.use(TextTransform)
 
 Vue.config.productionTip = false
