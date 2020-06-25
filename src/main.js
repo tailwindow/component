@@ -8,9 +8,7 @@ import TextTransform from '@/components/text-transform'
 import VueGtag from 'vue-gtag'
 
 Vue.use(VueGtag, {
-  config: { id: process.env.VUE_APP_GTAG_ID },
-  appName: 'Tailwindow Component',
-  pageTrackerScreenviewEnabled: true
+  config: { id: process.env.VUE_APP_GTAG_ID }
 }, router)
 
 Vue.use(TextTransform)
