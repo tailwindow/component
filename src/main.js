@@ -5,6 +5,17 @@ import router from './router'
 import store from './store'
 import './assets/css/tailwind.css'
 import TextTransform from '@/components/text-transform'
+import VueGtag from 'vue-gtag'
+
+Vue.use(VueGtag, {
+  config: { id: process.env.VUE_APP_GTAG_ID },
+  appName: 'Tailwindow Component',
+  pageTrackerScreenviewEnabled: true
+}, router)
+
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
 
 Vue.use(TextTransform)
 
