@@ -22,13 +22,22 @@
       </div>
       <div class="flex flex-1 flex-col mb-16 sm:mb-0 bg-gray-800 scrolling-touch overflow-y-auto hide-overflow-bar">
         <hr class="mb-4 mt-1 bg-gray-100 mx-4 opacity-50">
+        <button
+          v-if="isTocOpen"
+          tag="button"
+          to="#"
+          class="text-left text-white w-full mb-1 px-6 py-1 text-md sm:text-sm md:text-md font-light hover:text-blue-200"
+          @click.prevent="chooseAllComponents()"
+        >
+          <i class="fas fa-caret-right" /> All
+        </button>
         <template v-for="(componentGroup, index) in listGroups">
           <button
             v-if="isTocOpen"
             :key="index"
             tag="button"
             to="#"
-            class="text-left text-white w-full mb-1 px-6 py-1 text-xl sm:text-sm font-light hover:text-blue-200"
+            class="text-left text-white w-full mb-1 px-6 py-1 text-md sm:text-sm md:text-md font-light hover:text-blue-200"
             @click.prevent="chooseComponentGroup(componentGroup)"
           >
             <i class="fas fa-caret-right" /> {{ componentGroup.name | titlecase }}
@@ -47,18 +56,24 @@
             >
               <router-link
                 tag="button"
-                class="flex bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
+                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
                 :to="component.route"
               >
                 <img
                   v-if="component.thumbnail"
-                  class="flex-1 object-center"
+                  class="object-center"
                   :src="component.thumbnail"
                   alt=""
                 >
+                <div
+                  v-if="component.thumbnail"
+                  class="flex flex-col justify-center w-full pt-1"
+                >
+                  <span class="text-xs font-hairline lowercase">{{ component.name }}</span>
+                </div>
                 <span
-                  v-else
-                  class="flex flex-col my-2 mx-1"
+                  v-if="!component.thumbnail"
+                  class="flex flex-col w-full justify-center my-2 px-1"
                 >
                   <span class="text-sm">{{ component.name }}</span>
                   <span class="text-xs font-hairline lowercase">{{ component.group }}</span>
@@ -78,18 +93,24 @@
             >
               <router-link
                 tag="button"
-                class="flex bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
+                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
                 :to="component.route"
               >
                 <img
                   v-if="component.thumbnail"
-                  class="flex-1 object-center"
+                  class="object-center"
                   :src="component.thumbnail"
                   alt=""
                 >
+                <div
+                  v-if="component.thumbnail"
+                  class="flex flex-col justify-center w-full pt-1"
+                >
+                  <span class="text-xs font-hairline lowercase">{{ component.name }}</span>
+                </div>
                 <span
-                  v-else
-                  class="flex flex-col my-2 mx-1"
+                  v-if="!component.thumbnail"
+                  class="flex flex-col w-full justify-center my-2 px-1"
                 >
                   <span class="text-sm">{{ component.name }}</span>
                   <span class="text-xs font-hairline lowercase">{{ component.group }}</span>
@@ -148,18 +169,23 @@
 
 <script>
 import Logo from '@/components/Logo'
+import CollectionMixin from '@/mixins/collection'
 import { mapGetters } from 'vuex'
 
 export default {
   components: {
     Logo
   },
+  mixins: [
+    CollectionMixin
+  ],
   computed: {
     ...mapGetters('helper/sidebar', {
       isSidebarOpen: 'isOpen'
     }),
     ...mapGetters('helper/collection', {
       theme: 'theme',
+      collection: 'collection',
       listGroups: 'groups',
       listComponents: 'components'
     }),
@@ -168,9 +194,15 @@ export default {
     })
   },
   methods: {
+    chooseAllComponents () {
+      this.$store.dispatch('helper/toc/close')
+      this.$store.dispatch('helper/collection/setComponents', this.collection)
+      this.$router.push('/collection')
+    },
     chooseComponentGroup (componentGroup) {
       this.$store.dispatch('helper/toc/close')
       this.$store.dispatch('helper/collection/setGroup', componentGroup)
+      this.$store.dispatch('helper/collection/setComponents', this.$_collection_filterComponents(this.collection, componentGroup))
       this.$router.push(componentGroup.route)
     },
     chooseComponent (component) {

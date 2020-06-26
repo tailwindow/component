@@ -29,6 +29,12 @@ export default {
         console.log(e)
       }
     },
+    $_collection_filterComponents (collection, group) {
+      var components = collection.filter(function (component) {
+        return component.group === group.name
+      })
+      return components
+    },
     $_collection_filterGroups (components) {
       const array = components.map(component => {
         const obj = {}

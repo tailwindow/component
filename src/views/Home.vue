@@ -40,6 +40,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('helper/toc/open')
+    this.$store.dispatch('helper/collection/setComponent', {})
   },
   methods: {
   }

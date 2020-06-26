@@ -61,13 +61,13 @@ export default {
       isPreviewOpen: 'isOpen'
     }),
     ...mapGetters('helper/collection', {
-      components: 'components',
+      collection: 'collection',
       component: 'component'
     }),
     ...mapGetters('helper/device', ['device'])
   },
   mounted () {
-    this.components.forEach(component => {
+    this.collection.forEach(component => {
       if (component.route === this.$route.path) {
         this.$store.dispatch('helper/collection/setComponent', component)
       }

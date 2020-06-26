@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/collection/*',
+    path: '/collection*',
     name: 'Collection',
     component: () => import(/* webpackChunkName: "collection" */ '@/views/Collection.vue')
   },
