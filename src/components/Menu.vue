@@ -67,13 +67,13 @@
                 >
                 <div
                   v-if="component.thumbnail"
-                  class="flex flex-col justify-center w-full pt-1"
+                  class="flex flex-col items-center justify-center w-full pt-1"
                 >
                   <span class="text-xs font-hairline lowercase">{{ component.name }}</span>
                 </div>
                 <span
                   v-if="!component.thumbnail"
-                  class="flex flex-col w-full justify-center my-2 px-1"
+                  class="flex flex-col w-full items-center justify-center my-2 px-1"
                 >
                   <span class="text-sm">{{ component.name }}</span>
                   <span class="text-xs font-hairline lowercase">{{ component.group }}</span>
@@ -104,13 +104,13 @@
                 >
                 <div
                   v-if="component.thumbnail"
-                  class="flex flex-col justify-center w-full pt-1"
+                  class="flex flex-col items-center justify-center w-full pt-1"
                 >
                   <span class="text-xs font-hairline lowercase">{{ component.name }}</span>
                 </div>
                 <span
                   v-if="!component.thumbnail"
-                  class="flex flex-col w-full justify-center my-2 px-1"
+                  class="flex flex-col w-full items-center justify-center my-2 px-1"
                 >
                   <span class="text-sm">{{ component.name }}</span>
                   <span class="text-xs font-hairline lowercase">{{ component.group }}</span>
