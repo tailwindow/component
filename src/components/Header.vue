@@ -7,7 +7,7 @@
       </div>
       <div class="flex justify-between">
         <div class="flex">
-          <div class="mt-4 pt-1 px-2 mx-2 hidden sm:flex">
+          <div class="my-4 pt-1 px-2 mx-2 hidden sm:flex">
             <a
               href="javascript:void(0)"
               class="px-2 mx-1 shadow rounded-md hidden sm:flex flex-col text-center"
