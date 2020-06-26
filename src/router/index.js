@@ -12,9 +12,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/component/*',
-    name: 'Component',
-    component: () => import(/* webpackChunkName: "component" */ '@/views/Component.vue')
+    path: '/collection/*',
+    name: 'Collection',
+    component: () => import(/* webpackChunkName: "collection" */ '@/views/Collection.vue')
   },
   {
     path: '*',

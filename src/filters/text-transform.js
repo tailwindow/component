@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 export default {
   install: (Vue) => {
     Vue.filter('capitalize', function (value) {
@@ -23,6 +24,17 @@ export default {
       })
       value = value.replace(/-/g, ' ')
       return value
+    })
+    Vue.filter('slugify', function (value) {
+      if (!value) return ''
+      return value
+        .toString() // Cast to string
+        .toLowerCase() // Convert the string to lowercase letters
+        .normalize('NFD') // The normalize() method returns the Unicode Normalization Form of a given string.
+        .trim() // Remove whitespace from both sides of a string
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+        .replace(/\-\-+/g, '-') // Replace multiple - with single -
     })
   }
 }

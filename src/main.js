@@ -4,7 +4,8 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import './assets/css/tailwind.css'
-import TextTransform from '@/components/text-transform'
+import TextTransform from '@/filters/text-transform'
+import TextTransformPrototype from '@/plugins/text-transform'
 import VueGtag from 'vue-gtag'
 
 Vue.use(VueGtag, {
@@ -12,6 +13,7 @@ Vue.use(VueGtag, {
 }, router)
 
 Vue.use(TextTransform)
+Vue.use(TextTransformPrototype)
 
 Vue.config.productionTip = false
 

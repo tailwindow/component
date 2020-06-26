@@ -37,7 +37,7 @@
           />
         </g>
         <text
-          fill="#FFFFFF"
+          :class="{ 'fill-current text-gray-900' : isDark, 'fill-current text-white' : !isDark }"
           font-family="Nunito-Bold, Nunito"
           font-size="512"
           font-weight="bold"
@@ -51,3 +51,14 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  props: {
+    isDark: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>

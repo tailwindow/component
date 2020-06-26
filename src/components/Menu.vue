@@ -5,7 +5,7 @@
   >
     <div class="flex flex-1 flex-between h-screen flex-col w-screen sm:w-56">
       <div
-        class="flex flex-shrink flex-col flex-shrink w-full px-16 sm:px-8 pt-6 sm:pt-3 pb-4 sm:pb-2 bg-gray-800 text-gray-200 text-center"
+        class="flex flex-shrink flex-col w-full px-16 sm:px-8 pt-6 sm:pt-3 pb-4 sm:pb-2 bg-gray-800 text-gray-200 text-center"
         @click.prevent="$store.dispatch('helper/toc/open')"
       >
         <router-link to="/">
@@ -28,10 +28,10 @@
             :key="index"
             tag="button"
             to="#"
-            class="text-left text-white w-full mb-1 px-6 py-1 text-xl sm:text-sm font-light"
+            class="text-left text-white w-full mb-1 px-6 py-1 text-xl sm:text-sm font-light hover:text-blue-200"
             @click.prevent="chooseComponentGroup(componentGroup)"
           >
-            {{ componentGroup | titlecase }}
+            <i class="fas fa-caret-right" /> {{ componentGroup.name | titlecase }}
           </button>
         </template>
         <div class="flex flex-row h-full sm:flex-col w-full px-2">
@@ -47,14 +47,22 @@
             >
               <router-link
                 tag="button"
-                class="flex bg-white w-full p-2 self-center rounded-md shadow-md"
-                :to="'/component/tailwindcss/'+group+'/'+component"
+                class="flex bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
+                :to="component.route"
               >
                 <img
+                  v-if="component.thumbnail"
                   class="flex-1 object-center"
-                  :src="'/template/component/tailwindcss/'+group+'/'+component+'/thumb.svg'"
+                  :src="component.thumbnail"
                   alt=""
                 >
+                <span
+                  v-else
+                  class="flex flex-col my-2 mx-1"
+                >
+                  <span class="text-sm">{{ component.name }}</span>
+                  <span class="text-xs font-hairline lowercase">{{ component.group }}</span>
+                </span>
               </router-link>
             </div>
           </div>
@@ -70,14 +78,22 @@
             >
               <router-link
                 tag="button"
-                class="flex bg-white w-full p-2 self-center rounded-md shadow-md"
-                :to="'/component/tailwindcss/'+group+'/'+component"
+                class="flex bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
+                :to="component.route"
               >
                 <img
+                  v-if="component.thumbnail"
                   class="flex-1 object-center"
-                  :src="'/template/component/tailwindcss/'+group+'/'+component+'/thumb.svg'"
+                  :src="component.thumbnail"
                   alt=""
                 >
+                <span
+                  v-else
+                  class="flex flex-col my-2 mx-1"
+                >
+                  <span class="text-sm">{{ component.name }}</span>
+                  <span class="text-xs font-hairline lowercase">{{ component.group }}</span>
+                </span>
               </router-link>
             </div>
           </div>
@@ -142,12 +158,10 @@ export default {
     ...mapGetters('helper/sidebar', {
       isSidebarOpen: 'isOpen'
     }),
-    ...mapGetters('helper/preview', {
-      group: 'group',
+    ...mapGetters('helper/collection', {
+      theme: 'theme',
       listGroups: 'groups',
-      component: 'component',
-      listComponents: 'components',
-      rawComponent: 'rawComponent'
+      listComponents: 'components'
     }),
     ...mapGetters('helper/toc', {
       isTocOpen: 'isOpen'
@@ -155,14 +169,12 @@ export default {
   },
   methods: {
     chooseComponentGroup (componentGroup) {
-      this.$store.dispatch('helper/preview/setComponents', this.rawComponent.tailwindcss[componentGroup])
-      this.$store.dispatch('helper/preview/setGroup', componentGroup)
       this.$store.dispatch('helper/toc/close')
-      this.$router.push('/component/tailwindcss/' + componentGroup)
+      this.$store.dispatch('helper/collection/setGroup', componentGroup)
+      this.$router.push(componentGroup.route)
     },
     chooseComponent (component) {
-      this.$store.dispatch('helper/preview/setGroup', this.group)
-      this.$store.dispatch('helper/preview/setComponent', component)
+      this.$store.dispatch('helper/collection/setComponent', component)
       // Close sidebar if opened on phone
       const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
       if (vw < 640) {

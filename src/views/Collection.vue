@@ -25,17 +25,16 @@
     </button>
     <!-- Device Layout Screen -->
     <div
-      v-if="path != '/'"
       v-show="!isPreviewOpen"
       class="flex w-full shadow-lg"
       :class="{ 'max-w-screen-xs': device === 'xs', 'max-w-screen-sm': device === 'sm', 'max-w-screen-md': device === 'md', 'max-w-screen-lg': device === 'lg', '': device === 'xl' }"
     >
       <!-- Device Screen -->
       <iframe
-        v-if="path != '/' && path.split('/').length === 5"
+        v-if="component !== undefined"
         v-show="!isPreviewOpen"
         id="preview"
-        :src="templatebaseUrl + '/template' + path + '/index.html'"
+        :src="component.url"
         frameborder="0"
         class="bg-white flex-grow"
       />
@@ -45,67 +44,42 @@
 
 <script>
 import '@/plugins/prism'
-import { mapGetters } from 'vuex'
 import Prism from 'prismjs'
+import { mapGetters } from 'vuex'
 
 export default {
-  name: 'ComponentPreview',
+  name: 'Collection',
   data () {
     return {
-      templatebaseUrl: process.env.VUE_APP_TEMPLATE_BASE_URL,
-      path: '/',
       copyText: 'Copy To Clipboard',
-      rawHtml: '<div>Test</div>'
+      path: this.$route.path || '/',
+      rawHtml: ''
     }
   },
   computed: {
     ...mapGetters('helper/preview', {
-      isPreviewOpen: 'isOpen',
-      rawComponent: 'rawComponent'
+      isPreviewOpen: 'isOpen'
+    }),
+    ...mapGetters('helper/collection', {
+      components: 'components',
+      component: 'component'
     }),
     ...mapGetters('helper/device', ['device'])
   },
-  watch: {
-    $route (to, from) {
-      this.path = to.path
-    }
-  },
-  created () {
-    this.path = this.$route.path
-    this.append()
-  },
   mounted () {
-    this.path = this.$route.path
-    this.append()
+    this.components.forEach(component => {
+      if (component.route === this.$route.path) {
+        this.$store.dispatch('helper/collection/setComponent', component)
+      }
+    })
+    this.fetchPreview()
   },
   updated () {
-    this.path = this.$route.path
-    this.append()
+    this.fetchPreview()
   },
   methods: {
-    append () {
-      // Handle no page found
-      // Should fix it with lazy load all component routes
-      const array = this.path.split('/')
-      if (array.length < 4 && array.length > 5) {
-        return this.$router.push('/404')
-      }
-      // if themes exists (Todo: implement themes option)
-      if (this.rawComponent[array[2]] === undefined) {
-        // return this.$router.push('/404')
-      }
-      // if group exists
-      if (this.rawComponent.tailwindcss[array[3]] === undefined) {
-        return this.$router.push('/404')
-      }
-      // if components exists
-      if (!this.rawComponent.tailwindcss[array[3]].includes(array[4])) {
-        if (array[4] === undefined) {
-          return
-        }
-        return this.$router.push('/404')
-      }
-      fetch(process.env.VUE_APP_TEMPLATE_BASE_URL + '/template' + this.path + '/index.html').then(function (response) {
+    fetchPreview () {
+      fetch(this.component.url).then(function (response) {
         // The API call was successful!
         return response.text()
       }).then(html => {
