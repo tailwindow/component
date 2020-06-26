@@ -56,7 +56,7 @@
             >
               <router-link
                 tag="button"
-                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
+                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center items-center"
                 :to="component.route"
               >
                 <img
@@ -88,12 +88,12 @@
             <div
               v-for="(component, index) in listComponents.slice((listComponents.length + 1) / 2)"
               :key="'right-' + index"
-              class="w-full mb-3 thumbnail"
+              class="w-full mb-3 thumbnail shadow-md"
               @click.prevent="chooseComponent(component)"
             >
               <router-link
                 tag="button"
-                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center"
+                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center items-center"
                 :to="component.route"
               >
                 <img
