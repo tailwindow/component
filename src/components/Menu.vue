@@ -57,7 +57,7 @@
             >
               <router-link
                 tag="button"
-                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center items-center"
+                class="flex flex-col bg-white hover:bg-blue-100 w-full p-1 self-center rounded-md shadow-md justify-center items-center"
                 :to="component.route"
               >
                 <img
@@ -66,12 +66,6 @@
                   :src="component.thumbnail"
                   alt=""
                 >
-                <div
-                  v-if="component.thumbnail"
-                  class="flex flex-col items-center justify-center w-full pt-1"
-                >
-                  <span class="text-xs font-hairline lowercase">{{ component.name }}</span>
-                </div>
                 <span
                   v-if="!component.thumbnail"
                   class="flex flex-col w-full items-center justify-center my-2 px-1"
@@ -94,7 +88,7 @@
             >
               <router-link
                 tag="button"
-                class="flex flex-col bg-white w-full p-2 self-center rounded-md shadow-md justify-center items-center"
+                class="flex flex-col bg-white hover:bg-blue-100 w-full p-1 self-center rounded-md shadow-md justify-center items-center"
                 :to="component.route"
               >
                 <img
@@ -103,12 +97,6 @@
                   :src="component.thumbnail"
                   alt=""
                 >
-                <div
-                  v-if="component.thumbnail"
-                  class="flex flex-col items-center justify-center w-full pt-1"
-                >
-                  <span class="text-xs font-hairline lowercase">{{ component.name }}</span>
-                </div>
                 <span
                   v-if="!component.thumbnail"
                   class="flex flex-col w-full items-center justify-center my-2 px-1"
