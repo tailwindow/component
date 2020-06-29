@@ -1,9 +1,9 @@
 <template>
   <nav
     v-show="isSidebarOpen"
-    class="w-screen sm:w-56 h-screen overflow-hidden flex-shrink-0 fixed sm:relative"
+    class="flex flex-col flex-shrink-0 w-full sm:w-56 items-center justify-between"
   >
-    <div class="flex flex-1 flex-between h-screen flex-col w-screen sm:w-56">
+    <div class="flex flex-1 flex-between flex-col w-screen sm:w-56 h-full">
       <div
         class="flex flex-shrink flex-col w-full px-16 sm:px-8 pt-6 sm:pt-3 pb-4 sm:pb-2 bg-gray-800 text-gray-200 text-center"
         @click.prevent="$store.dispatch('helper/toc/open')"
@@ -15,12 +15,13 @@
           </p>
         </router-link>
       </div>
-      <div class="flex-shrink bg-gray-800 p-4">
-        <p class="p-2 bg-yellow-400 rounded-md text-center">
-          <b>early access</b>, more component is coming
-        </p>
-      </div>
-      <div class="flex flex-1 flex-col mb-16 sm:mb-0 bg-gray-800 scrolling-touch overflow-y-auto hide-overflow-bar">
+      <!-- Menu Content -->
+      <div class="bg-gray-800 h-full overflow-y-auto scrolling-touch flex flex-col flex-1">
+        <div class="flex-shrink bg-gray-800 p-4">
+          <p class="p-2 bg-yellow-400 rounded-md text-center text-sm">
+            <b>early access</b>, more component is coming
+          </p>
+        </div>
         <hr class="mb-4 mt-1 bg-gray-100 mx-4 opacity-50">
         <button
           v-if="isTocOpen"
@@ -120,11 +121,12 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-shrink text-center h-16 bg-gray-800 text-gray-200 px-2 pb-2 fixed sm:relative bottom-0 w-full">
+      <!-- Bottom Menu -->
+      <div class="flex bg-gray-800 text-white px-2 pt-2 h-16 self-stretch text-center items-center">
         <a
           v-if="isTocOpen"
           href="javascript:void(0)"
-          class="flex-1 pt-4 flex flex-col"
+          class="flex-1 flex flex-col"
           @click="$store.dispatch('helper/sidebar/toggle')"
         >
           <i class="fas fa-chevron-left text-xl text-white" />
@@ -133,7 +135,7 @@
         <a
           v-if="!isTocOpen"
           href="javascript:void(0)"
-          class="flex-1 pt-4 flex flex-col"
+          class="flex-1 flex flex-col"
           @click="$store.dispatch('helper/toc/open')"
         >
           <i class="fas fa-chevron-left text-xl text-white" />
@@ -141,7 +143,7 @@
         </a>
         <a
           href="#"
-          class="flex-1 pt-4 flex flex-col"
+          class="flex-1 flex flex-col"
           @click="$store.dispatch('helper/toc/open')"
         >
           <i class="fas fa-book text-xl text-white" />
@@ -149,7 +151,7 @@
         </a>
         <a
           href="https://www.tailwindow.com"
-          class="flex-1 pt-4 flex flex-col"
+          class="flex-1 flex flex-col"
         >
           <i class="fas fa-globe text-xl text-white" />
           <span class="text-xs pt-1">WEB</span>
@@ -157,7 +159,7 @@
         <a
           href="https://github.com/tailwindow/component"
           target="_blank"
-          class="flex-1 pt-4 flex flex-col"
+          class="flex-1 flex flex-col"
         >
           <i class="fab fa-github text-xl text-white" />
           <span class="text-xs pt-1">GITHUB</span>

@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-gray-100 overflow-hidden flex flex-grow justify-center w-full mx-auto">
+  <main class="bg-gray-100 overflow-hidden flex flex-1 justify-center w-full mx-auto">
     <pre
       v-show="isPreviewOpen"
       id="code-preview"

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="flex flex-grow-0 w-screen max-h-screen min-h-screen items-stretch">
+    <div class="flex h-full">
       <Menu />
       <div
         class="flex-1 flex-col sm:flex self-auto"

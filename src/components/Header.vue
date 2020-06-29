@@ -1,5 +1,5 @@
 <template>
-  <header class="h-16 w-full bg-gray-100 shadow-md mb-1 flex-shrink-0">
+  <header class="h-16 w-full bg-gray-100 shadow-md mb-1">
     <div class="flex justify-between ">
       <div class="flex flex-col item self-center flex-grow flex-no-wrap break-words m-4">
         <span class="text-sm">{{ component ? component.name : '' | titlecase }}</span>
